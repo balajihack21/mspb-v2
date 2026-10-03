@@ -3,6 +3,6 @@
 
 [[redirects]]
   from = "/api/quote"
-  to = "/.netlify/functions/quote"
+  to = "/.netlify/functions/quote.cjs"
   status = 200
   force = true
