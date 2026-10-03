@@ -1,0 +1,6 @@
+{
+  "name": "MSPB Technologies",
+  "description": "MSPB Technologies Pte Ltd - Enterprise IT Hardware, Server Maintenance, Workstations, Storage & Technical SLA Services (Singapore UEN 202350916Z).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
