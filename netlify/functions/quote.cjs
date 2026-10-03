@@ -1,4 +1,17 @@
+require('dotenv').config();
 const nodemailer = require('nodemailer');
+
+function getSenderAddress() {
+  if (process.env.SMTP_FROM) {
+    return process.env.SMTP_FROM;
+  }
+
+  if (process.env.SMTP_USER) {
+    return `MSPB Tech Quotes <${process.env.SMTP_USER}>`;
+  }
+
+  return 'MSPB Tech Quotes <contact@mspb-tech.com>';
+}
 
 exports.handler = async function (event) {
   if (event.httpMethod !== 'POST') {
@@ -74,8 +87,10 @@ MSPB Technologies Website
       },
     });
 
+    const senderAddress = getSenderAddress();
+
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || 'MSPB Tech Quotes <contact@mspb-tech.com>',
+      from: senderAddress,
       to: recipient,
       cc: ccRecipient,
       replyTo: email || undefined,
@@ -94,11 +109,14 @@ MSPB Technologies Website
       }),
     };
   } catch (error) {
+    console.error('[QUOTE_EMAIL_ERROR]', error);
+
     return {
       statusCode: 500,
       body: JSON.stringify({
         success: false,
         error: error && error.message ? error.message : 'Internal server error processing quote',
+        details: error && error.response ? error.response : null,
       }),
     };
   }
