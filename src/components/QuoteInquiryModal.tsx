@@ -23,8 +23,8 @@ export const QuoteInquiryModal: React.FC<QuoteInquiryModalProps> = ({
     'General Inquiry',
   ];
 
-  const targetEmail = 'contact@mspb-tech.com';
-  const ccEmail = 'ashikerogan@mspb-tech.com';
+  const targetEmail = 'contact@mspbtech.com';
+  const ccEmail = 'ashikerogan@mspbtech.com';
 
   const [inquiryCategory, setInquiryCategory] = useState(defaultInquiryType);
   const [hardwareDetails, setHardwareDetails] = useState(defaultHardwareDetails);

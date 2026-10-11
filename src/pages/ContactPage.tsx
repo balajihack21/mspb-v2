@@ -27,8 +27,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({
   initialHardwarePrefill = '',
   onNavigateHome,
 }) => {
-  const targetEmail = 'contact@mspb-tech.com';
-  const secondaryEmail = 'ashikerogan@mspb-tech.com';
+  const targetEmail = 'contact@mspbtech.com';
+  const secondaryEmail = 'ashikerogan@mspbtech.com';
 
   const [inquiryType, setInquiryType] = useState(initialInquiryType);
   const [name, setName] = useState('');
