@@ -28,8 +28,8 @@ app.post('/api/quote', async (req, res) => {
       message,
     } = req.body;
 
-    const recipient = process.env.QUOTE_RECIPIENT_EMAIL || 'contact@mspb-tech.com';
-    const ccRecipient = process.env.QUOTE_CC_EMAIL || 'ashikerogan@mspb-tech.com';
+    const recipient = process.env.QUOTE_RECIPIENT_EMAIL || 'contact@mspbtech.com';
+    const ccRecipient = process.env.QUOTE_CC_EMAIL || 'ashik@mspbtech.com';
     const type = inquiryType || inquiryCategory || 'Enterprise Hardware Quote';
     const details = hardwareDetails || message || 'No details provided';
 

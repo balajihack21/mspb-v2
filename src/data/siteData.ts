@@ -31,8 +31,8 @@ export const siteConfig = {
     whatsapp: '+65 84363635',
     email: 'contact@mspbtech.com',
     quoteEmail: 'contact@mspbtech.com',
-    secondaryEmail: 'ashikerogan@mspbtech.com',
-    emails: ['contact@mspbtech.com', 'ashikerogan@mspbtech.com'],
+    secondaryEmail: 'ashik@mspbtech.com',
+    emails: ['contact@mspbtech.com', 'ashik@mspbtech.com'],
     socials: {
       whatsapp: 'https://wa.me/6584363635',
       linkedin: 'https://linkedin.com/company',
